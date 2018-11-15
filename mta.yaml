@@ -1,3 +1,16 @@
 ID: push_to_git
 _schema-version: '2.1'
 version: 0.0.1
+
+modules:
+ - name: hdb_git
+   type: hdb
+   path: hdb_git
+   requires:
+    - name: hdi_hdb_git
+
+resources:
+ - name: hdi_hdb_git
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
