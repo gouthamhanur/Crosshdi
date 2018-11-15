@@ -9,8 +9,21 @@ modules:
    requires:
     - name: hdi_hdb_git
 
+
+ - name: hdb_remote_branch
+   type: hdb
+   path: hdb_remote_branch
+   requires:
+    - name: hdi_hdb_remote_branch
+
 resources:
  - name: hdi_hdb_git
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
+
+ - name: hdi_hdb_remote_branch
+   properties:
+      hdi-container-name_2: ${service-name}
+   type: com.sap.xs.hdi-container
+
