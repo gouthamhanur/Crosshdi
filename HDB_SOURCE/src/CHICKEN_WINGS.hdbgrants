@@ -1,0 +1,14 @@
+{
+  "CHICKEN_WINGS": {
+    "object_owner": {
+      "container_roles": [
+        "GRANT_SFLIGHT"
+      ]
+    },
+    "application_user": {
+      "container_roles": [
+        "SFLIGHT"
+      ]
+    }
+  }
+}

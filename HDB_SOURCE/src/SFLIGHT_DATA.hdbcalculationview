@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="HDI_DEVELOPMENT.HDB_SOURCE::SFLIGHT_DATA" applyPrivilegeType="SQL_ANALYTIC_PRIVILEGE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="SFLIGHT_DATA"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="HDI_DEVELOPMENT.HDB_SOURCE::FLIGHT">
+    <resourceUri>HDI_DEVELOPMENT.HDB_SOURCE::FLIGHT</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="HDI_DEVELOPMENT.HDB_SOURCE::FLIGHT">
+  <attributes>
+    <attribute id="FLIGHT" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLIGHT"/>
+      <keyMapping columnObjectName="FLIGHT" columnName="FLIGHT"/>
+    </attribute>
+    <attribute id="FDATE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FDATE"/>
+      <keyMapping columnObjectName="FLIGHT" columnName="FDATE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,17 @@
+{
+"role":{
+"name":"default_access_role",
+"schema_privileges": [{
+		   "privileges": ["SELECT METADATA", 
+		    			  "SELECT CDS METADATA", 
+			    	     "SELECT", 
+		    			  "EXECUTE"
+		   ]
+		}],
+		"schema_analytic_privileges":[
+   {
+     "privileges": ["HDI_DEVELOPMENT.HDB_SOURCE::RESTRICT_ALL"]
+   }
+ ]
+ }
+}

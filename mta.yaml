@@ -1,0 +1,33 @@
+ID: HDI_DEVELOPMENT
+_schema-version: '2.0'
+version: 0.0.1
+modules:
+  - name: HDB_SOURCE
+    type: hdb
+    path: HDB_SOURCE
+    requires:
+      - name: hdi_HDB_SOURCE
+        properties:
+          TARGET_CONTAINER: '~{hdi-container-name}'
+      - name: CHICKEN_WINGS
+      - name: cross-container-service-1
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: ServiceName_1
+          service: '~{the-service-name}'
+resources:
+  - name: hdi_HDB_SOURCE
+    parameters:
+      config:
+        schema: SOURCE_IP
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+  - name: CHICKEN_WINGS
+    type: org.cloudfoundry.existing-service
+  - name: cross-container-service-1
+    parameters:
+      service-name: GOUTHAM-r7mz1kv9qgrd2m55-CrossHDI-hdi1
+    properties:
+      the-service-name: '${service-name}'
+    type: org.cloudfoundry.existing-service

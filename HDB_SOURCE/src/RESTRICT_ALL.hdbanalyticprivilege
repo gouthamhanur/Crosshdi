@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Privilege:analyticPrivilege xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Privilege="http://www.sap.com/ndb/BiModelPrivilege.ecore" id="HDI_DEVELOPMENT.HDB_SOURCE::RESTRICT_ALL" privilegeType="SQL_ANALYTIC_PRIVILEGE" schemaVersion="1.1">
+<descriptions defaultDescription="RESTRICT_ALL"/>
+<securedModels>
+  <modelUri>HDI_DEVELOPMENT.HDB_SOURCE::SFLIGHT_DATA</modelUri>
+</securedModels>
+
+<restriction>
+  <filter attributeName="FLIGHT" xsi:type="Privilege:AttributeFilter">
+    <valueFilter xsi:type="AccessControl:SingleValueFilter" including="true" value="LH1" lowValue="undefined" highValue="undefined"/>
+  </filter>
+  <attributeName>FLIGHT</attributeName>
+  <originInformationModelUri>HDI_DEVELOPMENT.HDB_SOURCE::SFLIGHT_DATA</originInformationModelUri>
+</restriction>
+</Privilege:analyticPrivilege>

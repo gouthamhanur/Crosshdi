@@ -1,0 +1,8 @@
+{
+  "HDI_DEVELOPMENT.HDB_SOURCE::FLIGHT": {
+    "target": {
+      "object": "FLIGHT",
+      "grantor": "CHICKEN_WINGS"
+    }
+  }
+}
